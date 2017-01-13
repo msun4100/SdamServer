@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>쓰담</title>
+		<link rel='stylesheet' href='/stylesheets/style.css'/>
+		<script type="text/javascript">
+			function wReply() {
+				if(document.getElementById("repInputContent").value == "")  {
+					// 댓글내용 없을 경우 경고
+					alert("댓글내용을 입력하세요.");
+					document.getElementById("repInputContent").focus();
+					return;
+				} else if(document.getElementsByClassName("replyTable").length > 0) {	// 댓글 있는 경우
+					// 댓글 닉네임 정보
+					var nickArray = [];
+					var data = document.getElementsByClassName("nickname");
+					for(i=0; i<data.length; i++) {
+						nickArray.push(data[i].innerText);
+					}
+					document.getElementById("nicknames").value = nickArray;
+
+					// 댓글 작성자 정보
+					var replyWriterArray = [];
+					data = document.getElementsByClassName("replyWriter");
+					for(i=0; i<data.length; i++) {
+						replyWriterArray.push(data[i].innerText);
+					}
+					document.getElementById("replyWriters").value = replyWriterArray;
+
+					document.reply.submit();
+				} else {
+					document.reply.submit();
+				}
+			}
+			var nickArray = [ 	"담쟁이", "바람꽃", "장미", "백일홍", "어리연", "금잔화", "베고니아", "메리골드", "게발선인장", "해바라기", "나팔꽃", "초롱꽃", "복수초", "원추리", "쑥부쟁이", "무궁화", "노루귀", "칼랑코에", "데이지", "수선화", "팬지", "히아신스", "삿갓나물", "개감수", "앵초", "금불초", "남산제비꽃", "개별꽃", "벌노랑이", "과꽃", "강아지풀", "패랭이꽃", "갈퀴나물", "울릉국화", "개느삼", "연잎꿩의다리", "개가시나무", "흰진교", "황기", "황금", "라벤더", "페퍼민트", "로즈마리", "캐모마일", "재스민", "시계초", "보리지", "클라리세이지", "아니카", "스파티움", "스위트바질", "다크오팔바질", "쵸코민트", "파인애플민트", "란타나", "애플민트", "레몬바질", "오롱코롱민트", "레몬밤", "타임", "골든레몬타임", "레몬타임", "히솝", "장미허브", "애플사이다제라늄", "애플제라늄", "오레가노", "세이지", "파인애플세이지", "마조람", "보리지", "로즈힘", "펜넬", "타임", "세이지", "스피아민트", "레몬티트리", "레몬버베나", "브로니아", "차이브", "체리세이지", "로즈 제라늄", "야로우", "나스터 츔", "한련화", "아티초코", "레몬민트", "클리핑타임", "백리향", "소나무", "메타세콰이아", "푸른구상", "전나무", "개잎갈나무", "눈측백", "잎갈나무", "일본잎갈나무", "분비나무", "개비자나무", "개나리" ];
+
+			function wTag () {
+				var nickString = document.getElementsByClassName
+			}
+		</script>
+		<style type="text/css">
+			textarea { border:none; }
+			.articleTable { width: 20%; margin:auto; border-collapse:collapse; border-spacing: 10px; }
+			.articleHead { text-align: center; font-weight: bold; }
+			td { border: 1px solid black; padding: 5px; }
+			#articleContent { width: 90%; padding-left: 20px; }
+			.buttonRow { text-align: center; }
+			.buttonRow > goodCancelButton { margin-left: 20px; }
+			#replyInput { text-align: center; }
+			#replyInput>td { padding-bottom: 0; }
+			.replyTable { width: 20%; margin: auto; border-collapse:collapse; border-spacing: 10px; margin-top: 40px; }
+			.replyContent { width: 98%; height: 98%; }
+			.replyData { text-align: center; }
+			.tagButton { text-align: center; border-left: none; }
+			.realNick { border-right: none; padding-right: 20px; }
+			.replyButtonRow { text-align: center; }
+			.goodCancelButton { margin-left: 20px; }
+			.paddingRow { padding-bottom: 30px; border: none; }
+		</style>
+	</head>
+	<body>
+	<nav id="menu">
+	<ul >
+		<li>
+		<a href="#" class="parentMenu">공지사항</a>
+			<ul>
+				<li><a href="/wNotice" class="childMenu">공지목록</a></li>
+				<li><a href="/wNWrite" class="childMenu">공지작성</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">글관리</a>
+			<ul>
+				<li><a href="/wArticle" class="childMenu">글쓰기</a></li>
+				<li><a href="/wList" class="childMenu">글목록</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">사용자관리</a>
+			<ul>
+				<li><a href="#" class="childMenu">회원 목록</a></li>
+				<li><a href="#" class="childMenu">차단된 회원</a></li>
+				<li><a href="#" class="childMenu">신고된 회원</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="parentMenu">차단 및 신고</a>
+			<ul>
+				<li><a href="#" class="childMenu">신고된 글</a></li>
+				<li><a href="#" class="childMenu">차단된 글</a></li>
+				<li><a href="#" class="childMenu">신고된 댓글</a></li>
+				<li><a href="#" class="childMenu">차단된 댓글</a></li>
+			</ul>
+		</li>
+	</ul>
+	</nav>
+	<section>
+			<table class="articleTable">
+				<tr>
+					<td style="border:none;"><a href="/wList/<%=page%>">목록으로</a></td>
+				</tr>
+				<tr>
+					<td class="articleHead">글번호</td>
+					<td colspan="3"><%=num%></td>
+				</tr>
+				<tr>
+					<td class="articleHead">글쓴이</td>
+					<td colspan="3"><%=writer%></td>
+				</tr>
+				<tr>
+					<td class="articleHead">작성일자</td>
+					<td colspan="3"><%=regDate%></td>
+				</tr>
+				<tr>
+					<td style="width:25%; text-align:center; font-weight:bold;">감정</td>
+					<td style="width:25%;"><%=emotion%></td>
+					<td style="width:25%; text-align:center; font-weight:bold;">배경</td>
+					<td style="width:25%;"><%=image%></td>
+				</tr>
+				<tr>
+					<td colspan="4" style="padding-left:0; padding-right:0; padding-bottom:0;"><textarea rows="20" id="articleContent" readonly="readonly"><%=content%></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="4" class="buttonRow"><input type="button" value="좋아요"><input type="button" value="좋아요 취소" class="goodCancelButton"></td>
+				</tr>
+				<tr id="replyInput">
+						<td colspan="3">
+						<form action="/wReply" accept-charset="utf-8" name="reply" method="post">
+							<input type="hidden" name="num" value="<%=num%>">
+							<input type="hidden" name="writer" value="<%=writer%>">
+							<input type="hidden" name="page" value="<%=page%>">
+							<input type="hidden" name="nicknames" id="nicknames">
+							<input type="hidden" name="replyWriters" id="replyWriters">
+							<input type="hidden" name="tagIds" id="tagIds">
+							<input type="hidden" name="tagNicks" id="tagNicks">
+							<textarea rows="4" cols="40" id="repInputContent" name="replyContent"></textarea>
+						</form>
+						</td>
+						<td style="padding:0;"><input type="button" value="등록" onclick="wReply()" style="width:100%;height:100%;border:none;"></td>
+				</tr>
+			</table>
+		<!-- 댓글이 있을 때만 댓글 목록을 생성하여 댓글 목록이 없을경우 오류가 나지 않도록 한다 -->
+		<% if(typeof repList !== 'undefined') { %>
+			<table class="replyTable">
+			<% for(i=0; i<repList.length; i++) {
+				var item = repList[i];%>
+				<tr style="display:none">
+					<td class="replyData"></td>
+					<td colspan="3" class="replyNum" id="replyNum-<%=i%>"><%=item.reply_num%></td>
+				</tr>
+				<tr>
+					<td class="replyData">댓글쓴이</td>
+					<td colspan="3" class="replyWriter" id="replyWriter-<%=i%>"><%=item.reply_writer%></td>
+				</tr>
+				<tr>
+					<td class="replyData">등록일</td>
+					<td colspan="3"><%=item.regDate%></td>
+				</tr>
+				<tr>
+					<td class="replyData">좋아요</td>
+					<td colspan="3"><%=item.good_count%></td>
+				</tr>
+				<tr>
+					<td class="replyData<%=i%>">닉네임</td>
+					<td class="realNick" id="realNick-<%=i%>"><%=item.realNick%></td>
+					<td class="nickname" style="display:none;" id="nick<%=i%>"><%=item.nickname%></td>
+					<td class="tagButton"><input type="button" value="태그" onclick="wTag()"></td>
+				</tr>
+				<tr>
+					<td colspan="4" style="padding:0"><textarea rows="5" readonly="readonly" class="replyContent"><%=item.content%></textarea></td>
+				</tr>
+				<tr>
+					<td class="replyButtonRow" colspan="4"><input type="button" value="좋아요" id="good-<%=i%>"><input type="button" value="좋아요 취소" class="goodCancelButton" id="goodCancel-<%=i%>"></td>
+				</tr>
+				<tr >
+					<td class="paddingRow"><div></div></td>
+				</tr>
+				<% } %>
+			</table>
+		<% } %>
+	</section>
+	</body>
+</html>

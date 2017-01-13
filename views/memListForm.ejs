@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>쓰담</title>
+		<link rel='stylesheet' href='/stylesheets/style.css'/>
+		<style type="text/css">
+			.taskRow { border-top: none; border-right: none; border-left: none; border-bottom: 2px solid black; margin-bottom: 10px; }
+			.memberList { height: 50%; margin:auto; border-collapse:collapse; border-spacing: 10px; }
+			.memberData { border-left: 2px solid black; border-right: 2px solid black; border-top: 1px solid black; border-bottom: 1px solid black; padding: 5px; }
+			.tableHead { border: 2px solid black;  border-bottom: none; }
+			.emailData { text-align: center; border: 1px solid black; padding: 5px; }
+			th { border-right: 1px solid black; padding: 5px; }
+			td > div { width: 55em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+			.tableData { border: 1px solid black; padding: 5px; }
+			.pageBar { display: table; margin:auto; padding-top:10px; }
+			.searchBar { display: table; margin:auto; padding-top:15px; }
+			.textInput { margin-left:10px; }
+		</style>
+		<script type="text/javascript">
+			function test(o) {
+			        if (o.checked) {
+			            // add "num" class to your number td
+			            console.log(o.parentNode.parentNode.querySelector(".num").innerHTML);
+			        }
+			    }
+		</script>
+	</head>
+	<body>
+	<nav id="menu">
+	<ul >
+		<li>
+		<a href="#" class="parentMenu">공지사항</a>
+			<ul>
+				<li><a href="/wNotice" class="childMenu">공지목록</a></li>
+				<li><a href="/wNWrite" class="childMenu">공지작성</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">글관리</a>
+			<ul>
+				<li><a href="/wArticle" class="childMenu">글쓰기</a></li>
+				<li><a href="/wList" class="childMenu">글목록</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">사용자관리</a>
+			<ul>
+				<li><a href="/wMemList" class="childMenu">회원 목록</a></li>
+				<li><a href="#" class="childMenu">차단된 회원</a></li>
+				<li><a href="#" class="childMenu">신고된 회원</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="parentMenu">차단 및 신고</a>
+			<ul>
+				<li><a href="#" class="childMenu">신고된 글</a></li>
+				<li><a href="#" class="childMenu">차단된 글</a></li>
+				<li><a href="#" class="childMenu">신고된 댓글</a></li>
+				<li><a href="#" class="childMenu">차단된 댓글</a></li>
+			</ul>
+		</li>
+	</ul>
+	</nav>
+	<section>
+	<form action="" method="post">
+		<table class="memberList">
+		<tr class="taskRow">
+			<td colspan="8" style="padding-bottom:10px;">
+				<select>
+					<option value="ban">차단</option>
+					<option value="unban">차단해제</option>
+				</select>
+				<input type="submit" value="실행">
+			</td>
+		</tr>
+			<tr class="tableHead">
+				<th><input type="checkbox"></th>
+				<th style="width:20em;">E-mail</th>
+				<th style="width:4em;">성별</th>
+				<th style="width:4em;">생년</th>
+				<th style="width:6em;">가입일</th>
+				<th style="width:4em;">차단여부</th>
+				<th style="width:6em;">차단 일</th>
+				<th style="width:4em;">탈퇴여부</th>
+			</tr>
+			<% for(var i =0; i < list.length; i++ ) {
+					var item = list[i]; %>
+				<% if(i == list.length-1) {%>
+				<tr class="memberData" style="border-bottom: 2px solid black;">
+					<td><input type="checkbox" name="selectData<%=i%>" class="tableData" style="display:table; margin:auto;" onchange="test(this)"></td>
+					<td class="emailData"><%=item.email%></td>
+					<td style="text-align:center;" class="tableData"><%=item.sex%></td>
+					<td style="text-align:center;" class="tableData"><%=item.birth%></td>
+					<td style="text-align:center;" class="tableData"><%=item.regDate%></td>
+					<td style="text-align:center;" class="tableData"><%=item.ban%></td>
+					<td style="text-align:center;" class="tableData"><%=item.banDate%></td>
+					<td style="text-align:center;" class="tableData"><%=item.del%></td>
+				</tr>
+				<% } else { %>
+				<tr class="memberData">
+					<td><input type="checkbox" name="selectData<%=i%>" class="tableData" style="display:table; margin:auto;"></td>
+					<td class="emailData"><%=item.email%></td>
+					<td style="text-align:center;" class="tableData"><%=item.sex%></td>
+					<td style="text-align:center;" class="tableData"><%=item.birth%></td>
+					<td style="text-align:center;" class="tableData"><%=item.regDate%></td>
+					<td style="text-align:center;" class="tableData"><%=item.ban%></td>
+					<td style="text-align:center;" class="tableData"><%=item.banDate%></td>
+					<td style="text-align:center;" class="tableData"><%=item.del%></td>
+				</tr>
+				<% } %>
+			<% }; %>
+		</table>
+		</form>
+		<div class="pageBar">
+			<% if(page > pageSize) {%>
+				[ <a style="text-decoration : none" href="/wMemList/1">◀◀</a> ]
+				[ <a style="text-decoration : none" href="/wMemList/<%=startPage-1%>">◀</a> ]
+			<% } else { %>
+				[ <span style="color:gray">◀◀</span> ]
+				[ <span style="color:gray">◀</span> ]
+			<% } %>
+			&nbsp;&nbsp;    <%// &nbsp; 는 스페이스 한 칸 %>
+			<% for(var i = startPage; i <= endPage; i++) { %>
+				<% if(i == page) { %>
+						[ <%=i%>]
+				<% } else { %>
+						[ <a href="/wMemList/<%=i%>"><%=i%></a>]
+				<% } %>
+			<% } %>
+			&nbsp;&nbsp;
+			<% if( endPage < totalPage ) { %>
+				[ <a style="text-decoration : none" href="/wMemList/<%=endPage+1%>">▶</a>]
+				[ <a style="text-decoration : none" href="/wMemList/<%=totalPage%>">▶▶</a>]
+			<% } else { %>
+				[ <span style="color: gray">▶</span> ]
+				[ <span style="color: gray">▶▶</span> ]
+			<% } %>
+		</div>
+		<div class="searchBar">
+			<form action="/wMemList/value" method="get">
+				<div>E-mail
+				<input type="text" name="serachData" class="textInput">
+				<input type="submit" value="검색" style="margin-left:5px;">
+				</div>
+			</form>
+		</div>
+	</section>
+	</body>
+</html>

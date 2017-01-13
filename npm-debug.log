@@ -1,0 +1,687 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\package.json
+5 verbose install where, deps [ 'C:\\dev-nodejs\\workspace\\SdamProject',
+5 verbose install   [ 'async',
+5 verbose install     'bcrypt',
+5 verbose install     'body-parser',
+5 verbose install     'cookie-parser',
+5 verbose install     'debug',
+5 verbose install     'ejs',
+5 verbose install     'express',
+5 verbose install     'express-session',
+5 verbose install     'moment',
+5 verbose install     'morgan',
+5 verbose install     'mysql',
+5 verbose install     'node-gcm',
+5 verbose install     'node-schedule',
+5 verbose install     'nodemailer',
+5 verbose install     'serve-favicon' ] ]
+6 verbose install where, peers [ 'C:\\dev-nodejs\\workspace\\SdamProject', [] ]
+7 verbose installManyTop reading for lifecycle C:\dev-nodejs\workspace\SdamProject\package.json
+8 info preinstall ssdam@0.0.0
+9 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\async\package.json
+10 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\body-parser\package.json
+11 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\cookie-parser\package.json
+12 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\debug\package.json
+13 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\ejs\package.json
+14 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\express\package.json
+15 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\express-session\package.json
+16 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\json\package.json
+17 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\moment\package.json
+18 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\morgan\package.json
+19 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\mysql\package.json
+20 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\node-gcm\package.json
+21 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\node-schedule\package.json
+22 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\nodemailer\package.json
+23 verbose installManyTop reading scoped package data from C:\dev-nodejs\workspace\SdamProject\node_modules\serve-favicon\package.json
+24 info package.json async@0.9.0 No license field.
+25 info package.json moment@2.9.0 No license field.
+26 info package.json node-schedule@0.2.9 No license field.
+27 info package.json cookie-parser@1.3.4 No license field.
+28 info package.json json@9.0.3 No license field.
+29 info package.json ejs@1.0.0 No license field.
+30 info package.json node-gcm@0.9.14 No license field.
+31 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\package.json
+32 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\async\package.json
+33 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\body-parser\package.json
+34 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\cookie-parser\package.json
+35 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\debug\package.json
+36 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\ejs\package.json
+37 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\express\package.json
+38 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\express-session\package.json
+39 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\json\package.json
+40 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\moment\package.json
+41 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\morgan\package.json
+42 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\mysql\package.json
+43 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\node-gcm\package.json
+44 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\node-schedule\package.json
+45 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\nodemailer\package.json
+46 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\serve-favicon\package.json
+47 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\.bin\json\package.json
+48 verbose targetResolver reading package data from C:\dev-nodejs\workspace\SdamProject\node_modules\.bin\json.cmd\package.json
+49 verbose already installed skipping body-parser@~1.10.1 C:\dev-nodejs\workspace\SdamProject
+50 verbose already installed skipping cookie-parser@~1.3.3 C:\dev-nodejs\workspace\SdamProject
+51 verbose already installed skipping debug@~2.1.1 C:\dev-nodejs\workspace\SdamProject
+52 verbose already installed skipping ejs@~1.0.0 C:\dev-nodejs\workspace\SdamProject
+53 verbose already installed skipping express@~4.10.6 C:\dev-nodejs\workspace\SdamProject
+54 verbose already installed skipping express-session@^1.10.1 C:\dev-nodejs\workspace\SdamProject
+55 verbose already installed skipping moment@^2.9.0 C:\dev-nodejs\workspace\SdamProject
+56 verbose already installed skipping morgan@~1.5.1 C:\dev-nodejs\workspace\SdamProject
+57 verbose already installed skipping mysql@~2.5.5 C:\dev-nodejs\workspace\SdamProject
+58 verbose already installed skipping node-gcm@^0.9.14 C:\dev-nodejs\workspace\SdamProject
+59 verbose already installed skipping node-schedule@^0.2.1 C:\dev-nodejs\workspace\SdamProject
+60 verbose already installed skipping nodemailer@^1.3.0 C:\dev-nodejs\workspace\SdamProject
+61 verbose already installed skipping serve-favicon@~2.2.0 C:\dev-nodejs\workspace\SdamProject
+62 verbose already installed skipping async@^0.9.0 C:\dev-nodejs\workspace\SdamProject
+63 silly cache add args [ 'bcrypt@0.8.5', null ]
+64 verbose cache add spec bcrypt@0.8.5
+65 silly cache add parsed spec Result {
+65 silly cache add   raw: 'bcrypt@0.8.5',
+65 silly cache add   scope: null,
+65 silly cache add   name: 'bcrypt',
+65 silly cache add   rawSpec: '0.8.5',
+65 silly cache add   spec: '0.8.5',
+65 silly cache add   type: 'version' }
+66 silly addNamed bcrypt@0.8.5
+67 verbose addNamed "0.8.5" is a plain semver version for bcrypt
+68 silly mapToRegistry name bcrypt
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'bcrypt',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   name: 'bcrypt',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri https://registry.npmjs.org/bcrypt
+73 verbose addNameVersion registry:https://registry.npmjs.org/bcrypt not in flight; fetching
+74 verbose request uri https://registry.npmjs.org/bcrypt
+75 verbose request no auth needed
+76 info attempt registry request try #1 at 22:44:32
+77 verbose request id 3da102df583d460c
+78 verbose etag W/"585d1ac9-15fcc"
+79 verbose lastModified Fri, 23 Dec 2016 12:38:33 GMT
+80 http request GET https://registry.npmjs.org/bcrypt
+81 http 304 https://registry.npmjs.org/bcrypt
+82 verbose headers { date: 'Fri, 23 Dec 2016 13:44:29 GMT',
+82 verbose headers   via: '1.1 varnish',
+82 verbose headers   'cache-control': 'max-age=300',
+82 verbose headers   etag: 'W/"585d1ac9-15fcc"',
+82 verbose headers   age: '88',
+82 verbose headers   connection: 'keep-alive',
+82 verbose headers   'x-served-by': 'cache-nrt6127-NRT',
+82 verbose headers   'x-cache': 'HIT',
+82 verbose headers   'x-cache-hits': '1',
+82 verbose headers   'x-timer': 'S1482500669.367960,VS0,VE0',
+82 verbose headers   vary: 'Accept-Encoding' }
+83 silly get cb [ 304,
+83 silly get   { date: 'Fri, 23 Dec 2016 13:44:29 GMT',
+83 silly get     via: '1.1 varnish',
+83 silly get     'cache-control': 'max-age=300',
+83 silly get     etag: 'W/"585d1ac9-15fcc"',
+83 silly get     age: '88',
+83 silly get     connection: 'keep-alive',
+83 silly get     'x-served-by': 'cache-nrt6127-NRT',
+83 silly get     'x-cache': 'HIT',
+83 silly get     'x-cache-hits': '1',
+83 silly get     'x-timer': 'S1482500669.367960,VS0,VE0',
+83 silly get     vary: 'Accept-Encoding' } ]
+84 verbose etag https://registry.npmjs.org/bcrypt from cache
+85 verbose get saving bcrypt to C:\Users\KMS\AppData\Roaming\npm-cache\registry.npmjs.org\bcrypt\.cache.json
+86 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+87 silly mapToRegistry name bcrypt
+88 silly mapToRegistry using default registry
+89 silly mapToRegistry registry https://registry.npmjs.org/
+90 silly mapToRegistry data Result {
+90 silly mapToRegistry   raw: 'bcrypt',
+90 silly mapToRegistry   scope: null,
+90 silly mapToRegistry   name: 'bcrypt',
+90 silly mapToRegistry   rawSpec: '',
+90 silly mapToRegistry   spec: 'latest',
+90 silly mapToRegistry   type: 'tag' }
+91 silly mapToRegistry uri https://registry.npmjs.org/bcrypt
+92 verbose addRemoteTarball https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.5.tgz not in flight; adding
+93 verbose addRemoteTarball [ 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.5.tgz',
+93 verbose addRemoteTarball   '8e5b81b4db80e944f440005979ca8d58a961861d' ]
+94 info retry fetch attempt 1 at 22:44:33
+95 info attempt registry request try #1 at 22:44:33
+96 http fetch GET https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.5.tgz
+97 http fetch 200 https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.5.tgz
+98 silly fetchAndShaCheck shasum 8e5b81b4db80e944f440005979ca8d58a961861d
+99 verbose addTmpTarball C:\Users\KMS\AppData\Local\Temp\npm-984-8f43c322\registry.npmjs.org\bcrypt\-\bcrypt-0.8.5.tgz not in flight; adding
+100 verbose addTmpTarball already have metadata; skipping unpack for bcrypt@0.8.5
+101 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+102 silly cache afterAdd bcrypt@0.8.5
+103 verbose afterAdd C:\Users\KMS\AppData\Roaming\npm-cache\bcrypt\0.8.5\package\package.json not in flight; writing
+104 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+105 verbose afterAdd C:\Users\KMS\AppData\Roaming\npm-cache\bcrypt\0.8.5\package\package.json written
+106 silly install resolved [ { name: 'bcrypt',
+106 silly install resolved     description: 'A bcrypt library for NodeJS.',
+106 silly install resolved     keywords:
+106 silly install resolved      [ 'bcrypt',
+106 silly install resolved        'password',
+106 silly install resolved        'auth',
+106 silly install resolved        'authentication',
+106 silly install resolved        'encryption',
+106 silly install resolved        'crypt',
+106 silly install resolved        'crypto' ],
+106 silly install resolved     main: './bcrypt',
+106 silly install resolved     version: '0.8.5',
+106 silly install resolved     author: { name: 'Nick Campbell', url: 'https://github.com/ncb000gt' },
+106 silly install resolved     engines: { node: '>= 0.6.0' },
+106 silly install resolved     repository:
+106 silly install resolved      { type: 'git',
+106 silly install resolved        url: 'git+https://github.com/ncb000gt/node.bcrypt.js.git' },
+106 silly install resolved     license: 'MIT',
+106 silly install resolved     bugs: { url: 'https://github.com/ncb000gt/node.bcrypt.js/issues' },
+106 silly install resolved     scripts:
+106 silly install resolved      { test: 'node-gyp configure build && nodeunit test',
+106 silly install resolved        install: 'node-gyp rebuild' },
+106 silly install resolved     dependencies: { bindings: '1.2.1', nan: '2.0.5' },
+106 silly install resolved     devDependencies: { nodeunit: '~0.9.1' },
+106 silly install resolved     contributors:
+106 silly install resolved      [ [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object],
+106 silly install resolved        [Object] ],
+106 silly install resolved     gypfile: true,
+106 silly install resolved     gitHead: '5d97708f06754d7d7989c67ba867002d10013615',
+106 silly install resolved     homepage: 'https://github.com/ncb000gt/node.bcrypt.js#readme',
+106 silly install resolved     _id: 'bcrypt@0.8.5',
+106 silly install resolved     _shasum: '8e5b81b4db80e944f440005979ca8d58a961861d',
+106 silly install resolved     _from: 'bcrypt@0.8.5',
+106 silly install resolved     _npmVersion: '2.13.3',
+106 silly install resolved     _nodeVersion: '3.0.0',
+106 silly install resolved     _npmUser: { name: 'defunctzombie', email: 'shtylman@gmail.com' },
+106 silly install resolved     dist:
+106 silly install resolved      { shasum: '8e5b81b4db80e944f440005979ca8d58a961861d',
+106 silly install resolved        tarball: 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.5.tgz' },
+106 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+106 silly install resolved     directories: {},
+106 silly install resolved     _resolved: 'https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.5.tgz' } ]
+107 info install bcrypt@0.8.5 into C:\dev-nodejs\workspace\SdamProject
+108 info installOne bcrypt@0.8.5
+109 verbose installOne of bcrypt to C:\dev-nodejs\workspace\SdamProject not in flight; installing
+110 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+111 verbose lock using C:\Users\KMS\AppData\Roaming\npm-cache\_locks\bcrypt-faf363791ab1f560.lock for C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+112 silly install write writing bcrypt 0.8.5 to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+113 verbose unbuild node_modules\bcrypt
+114 silly gentlyRm C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt is being purged from base C:\dev-nodejs\workspace\SdamProject
+115 verbose gentlyRm don't care about contents; nuking C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+116 verbose tar unpack C:\Users\KMS\AppData\Roaming\npm-cache\bcrypt\0.8.5\package.tgz
+117 verbose tar unpacking to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+118 silly gentlyRm C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt is being purged
+119 verbose gentlyRm don't care about contents; nuking C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+120 silly gunzTarPerm modes [ '777', '666' ]
+121 silly gunzTarPerm extractEntry package.json
+122 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+123 silly gunzTarPerm extractEntry .npmignore
+124 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+125 silly gunzTarPerm extractEntry README.md
+126 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+127 silly gunzTarPerm extractEntry LICENSE
+128 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+129 silly gunzTarPerm extractEntry bcrypt.js
+130 silly gunzTarPerm modified mode [ 'bcrypt.js', 420, 438 ]
+131 silly gunzTarPerm extractEntry binding.gyp
+132 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+133 silly gunzTarPerm extractEntry .travis.yml
+134 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+135 silly gunzTarPerm extractEntry CHANGELOG.md
+136 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
+137 silly gunzTarPerm extractEntry examples/async_compare.js
+138 silly gunzTarPerm modified mode [ 'examples/async_compare.js', 420, 438 ]
+139 silly gunzTarPerm extractEntry examples/forever_gen_salt.js
+140 silly gunzTarPerm modified mode [ 'examples/forever_gen_salt.js', 420, 438 ]
+141 silly gunzTarPerm extractEntry test/async.js
+142 silly gunzTarPerm modified mode [ 'test/async.js', 420, 438 ]
+143 silly gunzTarPerm extractEntry test/repetitions.js
+144 silly gunzTarPerm modified mode [ 'test/repetitions.js', 420, 438 ]
+145 silly gunzTarPerm extractEntry test/sync.js
+146 silly gunzTarPerm modified mode [ 'test/sync.js', 420, 438 ]
+147 silly gunzTarPerm extractEntry Makefile
+148 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+149 silly gunzTarPerm extractEntry src/bcrypt.cc
+150 silly gunzTarPerm modified mode [ 'src/bcrypt.cc', 420, 438 ]
+151 silly gunzTarPerm extractEntry src/bcrypt_node.cc
+152 silly gunzTarPerm modified mode [ 'src/bcrypt_node.cc', 420, 438 ]
+153 silly gunzTarPerm extractEntry src/blowfish.cc
+154 silly gunzTarPerm modified mode [ 'src/blowfish.cc', 420, 438 ]
+155 silly gunzTarPerm extractEntry src/node_blf.h
+156 silly gunzTarPerm modified mode [ 'src/node_blf.h', 420, 438 ]
+157 silly gunzTarPerm extractEntry werker.yml
+158 silly gunzTarPerm modified mode [ 'werker.yml', 420, 438 ]
+159 verbose write writing to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\package.json
+160 info preinstall bcrypt@0.8.5
+161 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\package.json
+162 silly prepareForInstallMany adding bindings@1.2.1 from bcrypt dependencies
+163 silly prepareForInstallMany adding nan@2.0.5 from bcrypt dependencies
+164 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\package.json
+165 silly cache add args [ 'nan@2.0.5', null ]
+166 verbose cache add spec nan@2.0.5
+167 silly cache add parsed spec Result {
+167 silly cache add   raw: 'nan@2.0.5',
+167 silly cache add   scope: null,
+167 silly cache add   name: 'nan',
+167 silly cache add   rawSpec: '2.0.5',
+167 silly cache add   spec: '2.0.5',
+167 silly cache add   type: 'version' }
+168 silly addNamed nan@2.0.5
+169 verbose addNamed "2.0.5" is a plain semver version for nan
+170 silly mapToRegistry name nan
+171 silly mapToRegistry using default registry
+172 silly mapToRegistry registry https://registry.npmjs.org/
+173 silly mapToRegistry data Result {
+173 silly mapToRegistry   raw: 'nan',
+173 silly mapToRegistry   scope: null,
+173 silly mapToRegistry   name: 'nan',
+173 silly mapToRegistry   rawSpec: '',
+173 silly mapToRegistry   spec: 'latest',
+173 silly mapToRegistry   type: 'tag' }
+174 silly mapToRegistry uri https://registry.npmjs.org/nan
+175 verbose addNameVersion registry:https://registry.npmjs.org/nan not in flight; fetching
+176 silly cache add args [ 'bindings@1.2.1', null ]
+177 verbose cache add spec bindings@1.2.1
+178 silly cache add parsed spec Result {
+178 silly cache add   raw: 'bindings@1.2.1',
+178 silly cache add   scope: null,
+178 silly cache add   name: 'bindings',
+178 silly cache add   rawSpec: '1.2.1',
+178 silly cache add   spec: '1.2.1',
+178 silly cache add   type: 'version' }
+179 silly addNamed bindings@1.2.1
+180 verbose addNamed "1.2.1" is a plain semver version for bindings
+181 silly mapToRegistry name bindings
+182 silly mapToRegistry using default registry
+183 silly mapToRegistry registry https://registry.npmjs.org/
+184 silly mapToRegistry data Result {
+184 silly mapToRegistry   raw: 'bindings',
+184 silly mapToRegistry   scope: null,
+184 silly mapToRegistry   name: 'bindings',
+184 silly mapToRegistry   rawSpec: '',
+184 silly mapToRegistry   spec: 'latest',
+184 silly mapToRegistry   type: 'tag' }
+185 silly mapToRegistry uri https://registry.npmjs.org/bindings
+186 verbose addNameVersion registry:https://registry.npmjs.org/bindings not in flight; fetching
+187 verbose request uri https://registry.npmjs.org/nan
+188 verbose request no auth needed
+189 info attempt registry request try #1 at 22:44:34
+190 verbose etag W/"585acecf-1d7db"
+191 verbose lastModified Wed, 21 Dec 2016 18:49:51 GMT
+192 http request GET https://registry.npmjs.org/nan
+193 verbose request uri https://registry.npmjs.org/bindings
+194 verbose request no auth needed
+195 info attempt registry request try #1 at 22:44:34
+196 verbose etag W/"580645d3-46f7"
+197 verbose lastModified Tue, 18 Oct 2016 15:54:59 GMT
+198 http request GET https://registry.npmjs.org/bindings
+199 http 304 https://registry.npmjs.org/nan
+200 verbose headers { date: 'Fri, 23 Dec 2016 13:44:30 GMT',
+200 verbose headers   via: '1.1 varnish',
+200 verbose headers   'cache-control': 'max-age=300',
+200 verbose headers   etag: 'W/"585acecf-1d7db"',
+200 verbose headers   age: '70',
+200 verbose headers   connection: 'keep-alive',
+200 verbose headers   'x-served-by': 'cache-nrt6127-NRT',
+200 verbose headers   'x-cache': 'HIT',
+200 verbose headers   'x-cache-hits': '1',
+200 verbose headers   'x-timer': 'S1482500670.430976,VS0,VE0',
+200 verbose headers   vary: 'Accept-Encoding' }
+201 silly get cb [ 304,
+201 silly get   { date: 'Fri, 23 Dec 2016 13:44:30 GMT',
+201 silly get     via: '1.1 varnish',
+201 silly get     'cache-control': 'max-age=300',
+201 silly get     etag: 'W/"585acecf-1d7db"',
+201 silly get     age: '70',
+201 silly get     connection: 'keep-alive',
+201 silly get     'x-served-by': 'cache-nrt6127-NRT',
+201 silly get     'x-cache': 'HIT',
+201 silly get     'x-cache-hits': '1',
+201 silly get     'x-timer': 'S1482500670.430976,VS0,VE0',
+201 silly get     vary: 'Accept-Encoding' } ]
+202 verbose etag https://registry.npmjs.org/nan from cache
+203 verbose get saving nan to C:\Users\KMS\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+204 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+205 silly mapToRegistry name nan
+206 silly mapToRegistry using default registry
+207 silly mapToRegistry registry https://registry.npmjs.org/
+208 silly mapToRegistry data Result {
+208 silly mapToRegistry   raw: 'nan',
+208 silly mapToRegistry   scope: null,
+208 silly mapToRegistry   name: 'nan',
+208 silly mapToRegistry   rawSpec: '',
+208 silly mapToRegistry   spec: 'latest',
+208 silly mapToRegistry   type: 'tag' }
+209 silly mapToRegistry uri https://registry.npmjs.org/nan
+210 verbose addRemoteTarball https://registry.npmjs.org/nan/-/nan-2.0.5.tgz not in flight; adding
+211 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-2.0.5.tgz',
+211 verbose addRemoteTarball   '365888014be1fd178db0cbfa258edf7b0cb1c408' ]
+212 info retry fetch attempt 1 at 22:44:34
+213 info attempt registry request try #1 at 22:44:34
+214 http fetch GET https://registry.npmjs.org/nan/-/nan-2.0.5.tgz
+215 http fetch 200 https://registry.npmjs.org/nan/-/nan-2.0.5.tgz
+216 http 304 https://registry.npmjs.org/bindings
+217 verbose headers { date: 'Fri, 23 Dec 2016 13:44:30 GMT',
+217 verbose headers   via: '1.1 varnish',
+217 verbose headers   'cache-control': 'max-age=300',
+217 verbose headers   etag: 'W/"580645d3-46f7"',
+217 verbose headers   age: '0',
+217 verbose headers   connection: 'keep-alive',
+217 verbose headers   'x-served-by': 'cache-nrt6129-NRT',
+217 verbose headers   'x-cache': 'HIT',
+217 verbose headers   'x-cache-hits': '1',
+217 verbose headers   'x-timer': 'S1482500670.591644,VS0,VE124',
+217 verbose headers   vary: 'Accept-Encoding' }
+218 silly get cb [ 304,
+218 silly get   { date: 'Fri, 23 Dec 2016 13:44:30 GMT',
+218 silly get     via: '1.1 varnish',
+218 silly get     'cache-control': 'max-age=300',
+218 silly get     etag: 'W/"580645d3-46f7"',
+218 silly get     age: '0',
+218 silly get     connection: 'keep-alive',
+218 silly get     'x-served-by': 'cache-nrt6129-NRT',
+218 silly get     'x-cache': 'HIT',
+218 silly get     'x-cache-hits': '1',
+218 silly get     'x-timer': 'S1482500670.591644,VS0,VE124',
+218 silly get     vary: 'Accept-Encoding' } ]
+219 verbose etag https://registry.npmjs.org/bindings from cache
+220 verbose get saving bindings to C:\Users\KMS\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
+221 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+222 silly fetchAndShaCheck shasum 365888014be1fd178db0cbfa258edf7b0cb1c408
+223 verbose addTmpTarball C:\Users\KMS\AppData\Local\Temp\npm-984-8f43c322\registry.npmjs.org\nan\-\nan-2.0.5.tgz not in flight; adding
+224 verbose addTmpTarball already have metadata; skipping unpack for nan@2.0.5
+225 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+226 silly cache afterAdd nan@2.0.5
+227 verbose afterAdd C:\Users\KMS\AppData\Roaming\npm-cache\nan\2.0.5\package\package.json not in flight; writing
+228 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+229 silly cache afterAdd bindings@1.2.1
+230 verbose afterAdd C:\Users\KMS\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json not in flight; writing
+231 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+232 verbose afterAdd C:\Users\KMS\AppData\Roaming\npm-cache\nan\2.0.5\package\package.json written
+233 verbose afterAdd C:\Users\KMS\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json written
+234 silly install resolved [ { name: 'nan',
+234 silly install resolved     version: '2.0.5',
+234 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+234 silly install resolved     main: 'include_dirs.js',
+234 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+234 silly install resolved     scripts:
+234 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+234 silly install resolved        'rebuild-tests': 'pangyp rebuild --msvs_version=2013 --directory test',
+234 silly install resolved        docs: 'doc/.build.sh' },
+234 silly install resolved     contributors:
+234 silly install resolved      [ [Object],
+234 silly install resolved        [Object],
+234 silly install resolved        [Object],
+234 silly install resolved        [Object],
+234 silly install resolved        [Object],
+234 silly install resolved        [Object],
+234 silly install resolved        [Object] ],
+234 silly install resolved     devDependencies:
+234 silly install resolved      { bindings: '~1.2.1',
+234 silly install resolved        'node-gyp': '~2.0.2',
+234 silly install resolved        pangyp: '~2.2.0',
+234 silly install resolved        tap: '~0.7.1',
+234 silly install resolved        xtend: '~4.0.0' },
+234 silly install resolved     license: 'MIT',
+234 silly install resolved     gitHead: 'd13a2e9ce762fd130877b53c71d35963fa2cf689',
+234 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+234 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+234 silly install resolved     _id: 'nan@2.0.5',
+234 silly install resolved     _shasum: '365888014be1fd178db0cbfa258edf7b0cb1c408',
+234 silly install resolved     _from: 'nan@2.0.5',
+234 silly install resolved     _npmVersion: '2.13.3',
+234 silly install resolved     _nodeVersion: '3.0.0',
+234 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+234 silly install resolved     maintainers: [ [Object], [Object] ],
+234 silly install resolved     dist:
+234 silly install resolved      { shasum: '365888014be1fd178db0cbfa258edf7b0cb1c408',
+234 silly install resolved        tarball: 'https://registry.npmjs.org/nan/-/nan-2.0.5.tgz' },
+234 silly install resolved     directories: {},
+234 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.0.5.tgz' },
+234 silly install resolved   { name: 'bindings',
+234 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+234 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+234 silly install resolved     version: '1.2.1',
+234 silly install resolved     author:
+234 silly install resolved      { name: 'Nathan Rajlich',
+234 silly install resolved        email: 'nathan@tootallnate.net',
+234 silly install resolved        url: 'http://tootallnate.net' },
+234 silly install resolved     repository:
+234 silly install resolved      { type: 'git',
+234 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+234 silly install resolved     main: './bindings.js',
+234 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+234 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+234 silly install resolved     license: 'MIT',
+234 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
+234 silly install resolved     _id: 'bindings@1.2.1',
+234 silly install resolved     scripts: {},
+234 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+234 silly install resolved     _from: 'bindings@1.2.1',
+234 silly install resolved     _npmVersion: '1.4.14',
+234 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+234 silly install resolved     maintainers: [ [Object], [Object] ],
+234 silly install resolved     dist:
+234 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+234 silly install resolved        tarball: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+234 silly install resolved     directories: {},
+234 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
+234 silly install resolved     readme: 'ERROR: No README data found!' } ]
+235 info install nan@2.0.5 into C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+236 info install bindings@1.2.1 into C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+237 info installOne nan@2.0.5
+238 verbose installOne of nan to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt not in flight; installing
+239 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+240 info installOne bindings@1.2.1
+241 verbose installOne of bindings to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt not in flight; installing
+242 verbose correctMkdir C:\Users\KMS\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+243 verbose lock using C:\Users\KMS\AppData\Roaming\npm-cache\_locks\bindings-8465a87cefe13c85.lock for C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+244 verbose lock using C:\Users\KMS\AppData\Roaming\npm-cache\_locks\nan-da1be14e8df33989.lock for C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+245 silly install write writing bindings 1.2.1 to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+246 silly install write writing nan 2.0.5 to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+247 verbose unbuild node_modules\bcrypt\node_modules\bindings
+248 verbose unbuild node_modules\bcrypt\node_modules\nan
+249 silly gentlyRm C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings is being purged from base C:\dev-nodejs\workspace\SdamProject
+250 verbose gentlyRm don't care about contents; nuking C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+251 verbose tar unpack C:\Users\KMS\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+252 verbose tar unpacking to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+253 silly gentlyRm C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings is being purged
+254 verbose gentlyRm don't care about contents; nuking C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+255 silly gentlyRm C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan is being purged from base C:\dev-nodejs\workspace\SdamProject
+256 verbose gentlyRm don't care about contents; nuking C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+257 silly gunzTarPerm modes [ '777', '666' ]
+258 verbose tar unpack C:\Users\KMS\AppData\Roaming\npm-cache\nan\2.0.5\package.tgz
+259 verbose tar unpacking to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+260 silly gentlyRm C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan is being purged
+261 verbose gentlyRm don't care about contents; nuking C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+262 silly gunzTarPerm modes [ '777', '666' ]
+263 silly gunzTarPerm extractEntry package.json
+264 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+265 silly gunzTarPerm extractEntry package.json
+266 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+267 silly gunzTarPerm extractEntry README.md
+268 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+269 silly gunzTarPerm extractEntry bindings.js
+270 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
+271 silly gunzTarPerm extractEntry README.md
+272 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+273 silly gunzTarPerm extractEntry include_dirs.js
+274 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+275 silly gunzTarPerm extractEntry nan_converters.h
+276 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+277 silly gunzTarPerm extractEntry LICENSE.md
+278 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+279 silly gunzTarPerm extractEntry .dntrc
+280 silly gunzTarPerm modified mode [ '.dntrc', 436, 438 ]
+281 silly gunzTarPerm extractEntry appveyor.yml
+282 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 438 ]
+283 silly gunzTarPerm extractEntry doc/new.md
+284 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+285 silly gunzTarPerm extractEntry doc/.build.sh
+286 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 511 ]
+287 silly gunzTarPerm extractEntry doc/buffers.md
+288 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+289 silly gunzTarPerm extractEntry doc/callback.md
+290 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+291 verbose write writing to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings\package.json
+292 silly gunzTarPerm extractEntry doc/converters.md
+293 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+294 silly gunzTarPerm extractEntry doc/errors.md
+295 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+296 silly gunzTarPerm extractEntry doc/maybe_types.md
+297 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+298 silly gunzTarPerm extractEntry doc/methods.md
+299 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+300 info preinstall bindings@1.2.1
+301 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings\package.json
+302 silly gunzTarPerm extractEntry doc/asyncworker.md
+303 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
+304 silly gunzTarPerm extractEntry doc/node_misc.md
+305 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+306 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings\package.json
+307 silly install resolved []
+308 verbose about to build C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+309 info build C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+310 silly gunzTarPerm extractEntry doc/persistent.md
+311 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+312 silly gunzTarPerm extractEntry doc/scopes.md
+313 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+314 info linkStuff bindings@1.2.1
+315 silly linkStuff bindings@1.2.1 has C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules as its parent node_modules
+316 verbose linkBins bindings@1.2.1
+317 verbose linkMans bindings@1.2.1
+318 verbose rebuildBundles bindings@1.2.1
+319 info install bindings@1.2.1
+320 info postinstall bindings@1.2.1
+321 silly gunzTarPerm extractEntry doc/script.md
+322 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
+323 silly gunzTarPerm extractEntry doc/string_bytes.md
+324 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 438 ]
+325 verbose unlock done using C:\Users\KMS\AppData\Roaming\npm-cache\_locks\bindings-8465a87cefe13c85.lock for C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\bindings
+326 silly gunzTarPerm extractEntry doc/v8_internals.md
+327 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 438 ]
+328 silly gunzTarPerm extractEntry doc/v8_misc.md
+329 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+330 silly gunzTarPerm extractEntry nan.h
+331 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+332 silly gunzTarPerm extractEntry nan_callbacks.h
+333 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
+334 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+335 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+336 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+337 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+338 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+339 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+340 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+341 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+342 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+343 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+344 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+345 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+346 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+347 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
+348 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+349 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
+350 silly gunzTarPerm extractEntry nan_new.h
+351 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+352 silly gunzTarPerm extractEntry nan_object_wrap.h
+353 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+354 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+355 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+356 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+357 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+358 silly gunzTarPerm extractEntry nan_string_bytes.h
+359 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+360 silly gunzTarPerm extractEntry nan_weak.h
+361 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+362 silly gunzTarPerm extractEntry CHANGELOG.md
+363 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+364 silly gunzTarPerm extractEntry tools/package.json
+365 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+366 silly gunzTarPerm extractEntry tools/README.md
+367 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+368 silly gunzTarPerm extractEntry tools/1to2.js
+369 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
+370 verbose write writing to C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan\package.json
+371 info preinstall nan@2.0.5
+372 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan\package.json
+373 verbose readDependencies loading dependencies from C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan\package.json
+374 silly install resolved []
+375 verbose about to build C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+376 info build C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+377 info linkStuff nan@2.0.5
+378 silly linkStuff nan@2.0.5 has C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules as its parent node_modules
+379 verbose linkBins nan@2.0.5
+380 verbose linkMans nan@2.0.5
+381 verbose rebuildBundles nan@2.0.5
+382 info install nan@2.0.5
+383 info postinstall nan@2.0.5
+384 verbose unlock done using C:\Users\KMS\AppData\Roaming\npm-cache\_locks\nan-da1be14e8df33989.lock for C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt\node_modules\nan
+385 verbose about to build C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+386 info build C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+387 info linkStuff bcrypt@0.8.5
+388 silly linkStuff bcrypt@0.8.5 has C:\dev-nodejs\workspace\SdamProject\node_modules as its parent node_modules
+389 verbose linkBins bcrypt@0.8.5
+390 verbose linkMans bcrypt@0.8.5
+391 verbose rebuildBundles bcrypt@0.8.5
+392 verbose rebuildBundles [ 'bindings', 'nan' ]
+393 info install bcrypt@0.8.5
+394 verbose unsafe-perm in lifecycle true
+395 info bcrypt@0.8.5 Failed to exec install script
+396 verbose unlock done using C:\Users\KMS\AppData\Roaming\npm-cache\_locks\bcrypt-faf363791ab1f560.lock for C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+397 verbose stack Error: bcrypt@0.8.5 install: `node-gyp rebuild`
+397 verbose stack Exit status 1
+397 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+397 verbose stack     at emitTwo (events.js:87:13)
+397 verbose stack     at EventEmitter.emit (events.js:172:7)
+397 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+397 verbose stack     at emitTwo (events.js:87:13)
+397 verbose stack     at ChildProcess.emit (events.js:172:7)
+397 verbose stack     at maybeClose (internal/child_process.js:827:16)
+397 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+398 verbose pkgid bcrypt@0.8.5
+399 verbose cwd C:\dev-nodejs\workspace\SdamProject
+400 error Windows_NT 10.0.10586
+401 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+402 error node v4.4.5
+403 error npm  v2.15.5
+404 error code ELIFECYCLE
+405 error bcrypt@0.8.5 install: `node-gyp rebuild`
+405 error Exit status 1
+406 error Failed at the bcrypt@0.8.5 install script 'node-gyp rebuild'.
+406 error This is most likely a problem with the bcrypt package,
+406 error not with npm itself.
+406 error Tell the author that this fails on your system:
+406 error     node-gyp rebuild
+406 error You can get information on how to open an issue for this project with:
+406 error     npm bugs bcrypt
+406 error Or if that isn't available, you can get their info via:
+406 error
+406 error     npm owner ls bcrypt
+406 error There is likely additional logging output above.
+407 verbose exit [ 1, true ]
+408 verbose unbuild node_modules\bcrypt
+409 info preuninstall bcrypt@0.8.5
+410 info uninstall bcrypt@0.8.5
+411 verbose unbuild rmStuff bcrypt@0.8.5 from C:\dev-nodejs\workspace\SdamProject\node_modules
+412 info postuninstall bcrypt@0.8.5
+413 silly gentlyRm C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt is being purged from base C:\dev-nodejs\workspace\SdamProject
+414 verbose gentlyRm don't care about contents; nuking C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+415 silly vacuum-fs purging C:\dev-nodejs\workspace\SdamProject\node_modules\bcrypt
+416 silly vacuum-fs quitting because other entries in C:\dev-nodejs\workspace\SdamProject\node_modules

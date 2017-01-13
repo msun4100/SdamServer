@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>쓰담</title>
+		<link rel='stylesheet' href='/stylesheets/style.css'/>
+		<style type="text/css">
+		.articleList { border: 2px solid black; margin:auto; border-collapse:collapse; border-spacing: 10px; }
+		/*#menu { height: 30px; width: 1080px; }
+		#menu ul li { list-style: none; background-color: #26A7C7; text-align: center; float: left; line-height: 30px; vertical-align: middle; font-color: #ffffff; }
+		#menu a:hover { color: #26A7C7; }
+		#menu ul li:hover ul { display: block; }
+		#menu childmenu { text-decoration:none; font-size: 12px; display: none; width: 200px; font-weight: bold;}*/
+		th { border: 1px solid black; padding: 5px;}
+		td { border: 1px solid black; padding: 5px; }
+		</style>
+	</head>
+	<body>
+	<nav id="menu">
+	<ul >
+		<li>
+		<a href="#" class="parentMenu">공지사항</a>
+			<ul>
+				<li><a href="/wNotice" class="childMenu">공지목록</a></li>
+				<li><a href="/wNWrite" class="childMenu">공지작성</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">글관리</a>
+			<ul>
+				<li><a href="/wArticle" class="childMenu">글쓰기</a></li>
+				<li><a href="/wList" class="childMenu">글목록</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">사용자관리</a>
+			<ul>
+				<li><a href="#" class="childMenu">회원 목록</a></li>
+				<li><a href="#" class="childMenu">차단된 회원</a></li>
+				<li><a href="#" class="childMenu">신고된 회원</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="parentMenu">차단 및 신고</a>
+			<ul>
+				<li><a href="#" class="childMenu">신고된 글</a></li>
+				<li><a href="#" class="childMenu">차단된 글</a></li>
+				<li><a href="#" class="childMenu">신고된 댓글</a></li>
+				<li><a href="#" class="childMenu">차단된 댓글</a></li>
+			</ul>
+		</li>
+	</ul>
+	</nav>
+	<section>
+		<table width="1080px" class="articleList">
+			<tr class="tableHead">
+				<th width="1em;"><input type="checkbox" class="articleSelectAll" name="allSelect"></th>
+				<th style="width:4em;">글번호</th>
+				<th>내용</th>
+				<th style="width:15em;">작성자</th>
+				<th style="width:4em;">조회수</th>
+				<th style="width:6em;">등록일</th>
+				<th style="width:5em;">좋아요 수</th>
+				<th style="width:5em;">댓글 수</th>
+			</tr>
+			<% for(var i =0; i < list.length; i++ ) {
+					var item = list[i]; %>
+			<tr class="articleData">
+				<td><input type="checkbox" class="articleSelect" name="selectData"></td>
+				<td style="text-align:center;"><%=item.num%></td>
+				<td style="text-overflow: ellipsis; overflow: hidden;"><a href="/wRead/<%=page%>/<%=item.num%>"><%=item.content%></a></td>
+				<td style="text-align:center;"><%=item.writer%></td>
+				<td style="text-align:center;"><%=item.hit%></td>
+				<td style="text-align:center;"><%=item.regDate%></td>
+				<td style="text-align:center;"><%=item.goodCount%></td>
+				<td style="text-align:center;"><%=item.replyCount%></td>
+			</tr>
+			<% }; %>
+		</table>
+			<div style="margin:auto; padding-top:10px;" align="center">
+				<% if(page > pageSize) {%>
+					[ <a style="text-decoration : none" href="/wNotice/1">◀◀</a> ]
+					[ <a style="text-decoration : none" href="/wNotice/<%=startPage-1%>">◀</a> ]
+				<% } else { %>
+					[ <span style="color:gray">◀◀</span> ]
+					[ <span style="color:gray">◀</span> ]
+				<% } %>
+				&nbsp;&nbsp;    <%// &nbsp; 는 스페이스 한 칸 %>
+				<% for(var i = startPage; i <= endPage; i++) { %>
+					<% if(i == page) { %>
+							[ <%=i%>]
+					<% } else { %>
+							[ <a href="/wNotice/<%=i%>"><%=i%></a>]
+					<% } %>
+				<% } %>
+				&nbsp;&nbsp;
+				<% if( endPage < totalPage ) { %>
+					[ <a style="text-decoration : none" href="/wNotice/<%=endPage+1%>">▶</a>]
+					[ <a style="text-decoration : none" href="/wNotice/<%=totalPage%>">▶▶</a>]
+				<% } else { %>
+					[ <span style="color: gray">▶</span> ]
+					[ <span style="color: gray">▶▶</span> ]
+				<% } %>
+			</div>
+			<div style="margin:auto; padding-top:15px;" align="center">
+			<form name="search" method="get" action="/wSearch">
+			<select class="searchSelector" name="searchType">
+				<option value="0" selected>내용</option>
+				<option value="1">글번호</option>
+				<option value="2">작성자</option>
+				<option value="3">등록일자</option>
+			</select>
+			<input type="text" name="serachData" width="100em" style="margin-left:10px;">
+			<input type="button" value="검색" style="margin-left:5px;">
+			</form>
+				<div style="margin-top:10px;">
+					<form name="updateArticle" method="post" action="/wUpdate">
+						<input type="submit" value="수정">
+					</form>
+				</div>
+				<div style="margin-top:10px;">
+					<form name="deleteArticle" method="post" action="/wDelete">
+						<input type="submit" value="삭제">
+					</form>
+				</div>
+			</div>
+	</section>
+	</body>
+</html>

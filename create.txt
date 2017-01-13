@@ -1,0 +1,241 @@
+create.txt
+
+CREATE TABLE `member` (
+	`email` VARCHAR(50) NOT NULL,
+	`birth` SMALLINT(6) NOT NULL DEFAULT '0',
+	`pw` VARCHAR(60) NOT NULL DEFAULT '0',
+	`push_id` VARCHAR(200) NULL DEFAULT NULL,
+	`start_age` TINYINT(4) UNSIGNED NOT NULL DEFAULT '0',
+	`end_age` TINYINT(4) UNSIGNED NOT NULL DEFAULT '100',
+	`latitude` VARCHAR(15) NULL DEFAULT 'N',
+	`logitude` VARCHAR(15) NULL DEFAULT 'N',
+	`sex` TINYINT(4) UNSIGNED NOT NULL,
+	`score` INT(11) UNSIGNED NULL DEFAULT '0',
+	`invite` TINYINT(4) UNSIGNED NULL DEFAULT '10',
+	`del` TINYINT(4) UNSIGNED NULL DEFAULT '0',
+	`ban_date` DATE NULL DEFAULT NULL,
+	`last_login` DATE NULL DEFAULT NULL,
+	`distance` INT(10) UNSIGNED NOT NULL DEFAULT '200',
+	`last_num` INT(11) UNSIGNED NULL DEFAULT NULL,
+	`active` TINYINT(4) UNSIGNED NULL DEFAULT '0',
+	`withdraw_date` DATE NULL DEFAULT NULL,
+	`ban` TINYINT(4) UNSIGNED NULL DEFAULT '0',
+	PRIMARY KEY (`email`),
+	INDEX `pw` (`pw`)
+)
+COMMENT='회원정보'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+CREATE TABLE `board` (
+	`num` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`writer` VARCHAR(50) NOT NULL,
+	`age` TINYINT(4) UNSIGNED NOT NULL,
+	`reg_date` DATETIME NOT NULL,
+	`latitude` VARCHAR(15) NULL DEFAULT NULL,
+	`logitude` VARCHAR(15) NULL DEFAULT NULL,
+	`local_name` VARCHAR(50) NOT NULL DEFAULT 'N',
+	`content` VARCHAR(1000) NOT NULL,
+	`click_num` INT(11) UNSIGNED NOT NULL DEFAULT '0',
+	`ban` TINYINT(4) UNSIGNED NOT NULL DEFAULT '0',
+	`locked` TINYINT(4) UNSIGNED NOT NULL DEFAULT '0',
+	`emotion` TINYINT(4) UNSIGNED NOT NULL DEFAULT '0',
+	`prior` TINYINT(4) UNSIGNED NOT NULL DEFAULT '0',
+	`unlocate` TINYINT(4) UNSIGNED NOT NULL DEFAULT '0',
+	`category` VARCHAR(2) NOT NULL,
+	`image` VARCHAR(3) NOT NULL,
+	`notice` ENUM('Y','N') NULL DEFAULT 'N',
+	PRIMARY KEY (`num`),
+	INDEX `category` (`category`),
+	INDEX `id` (`writer`),
+	INDEX `emotion` (`emotion`)
+)
+COMMENT='글 정보'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `reply` (
+	`num` INT(11) UNSIGNED NOT NULL,
+	`nickname` TINYINT(3) UNSIGNED NOT NULL DEFAULT '0',
+	`reply_num` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`reply_writer` VARCHAR(30) NOT NULL,
+	`active` TINYINT(3) UNSIGNED NOT NULL DEFAULT '0',
+	`reg_date` DATETIME NOT NULL,
+	`report` TINYINT(4) UNSIGNED NOT NULL DEFAULT '0',
+	`content` VARCHAR(1000) NOT NULL,
+	PRIMARY KEY (`reply_num`),
+	INDEX `b_n_r_fk` (`num`),
+	INDEX `nickname` (`nickname`),
+	INDEX `writer` (`reply_writer`),
+	CONSTRAINT `b_n_r` FOREIGN KEY (`num`) REFERENCES `board` (`num`)
+)
+COMMENT='댓글 정보'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `calendar` (
+	`emotion` TINYINT(4) UNSIGNED NOT NULL,
+	`id` VARCHAR(50) NOT NULL,
+	`reg_date` DATE NOT NULL,
+	`num` INT(11) UNSIGNED NOT NULL,
+	INDEX `id` (`id`),
+	INDEX `b_n_c` (`num`),
+	CONSTRAINT `b_n_c` FOREIGN KEY (`num`) REFERENCES `board` (`num`)
+)
+COMMENT='감정달력'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `goodwrite` (
+	`id` VARCHAR(50) NOT NULL,
+	`writer` VARCHAR(50) NOT NULL,
+	`num` INT(11) UNSIGNED NOT NULL,
+	`reg_date` DATETIME NULL DEFAULT NULL,
+	INDEX `num` (`num`),
+	INDEX `id` (`id`),
+	CONSTRAINT `b_n_gw` FOREIGN KEY (`num`) REFERENCES `board` (`num`)
+)
+COMMENT='글 좋아요'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `report` (
+	`report_date` DATE NOT NULL,
+	`num` INT(11) UNSIGNED NOT NULL,
+	`category` VARCHAR(2) NOT NULL,
+	`writer` VARCHAR(50) NOT NULL,
+	INDEX `writer` (`writer`),
+	INDEX `category` (`category`),
+	INDEX `b_bn_r_fk` (`num`),
+	CONSTRAINT `b_n_rp` FOREIGN KEY (`num`) REFERENCES `board` (`num`)
+)
+COMMENT='글 신고'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `writer_ban` (
+	`id` VARCHAR(50) NOT NULL,
+	`ban_date` DATE NOT NULL,
+	`num` INT(11) UNSIGNED NOT NULL,
+	`writer` VARCHAR(50) NOT NULL,
+	INDEX `b_bn_wb_fk` (`num`, `id`),
+	INDEX `m_id_wb_fk` (`writer`),
+	CONSTRAINT `b_n_wb` FOREIGN KEY (`num`) REFERENCES `board` (`num`),
+	CONSTRAINT `m_id_wb_fk` FOREIGN KEY (`writer`) REFERENCES `member` (`email`)
+)
+COMMENT='글쓴이 차단'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `article_ban` (
+	`id` VARCHAR(50) NOT NULL,
+	`ban_date` DATE NOT NULL,
+	`num` INT(11) UNSIGNED NULL DEFAULT NULL,
+	`writer` VARCHAR(50) NULL DEFAULT NULL,
+	INDEX `b_bn_ab_fk` (`num`),
+	INDEX `id` (`id`),
+	CONSTRAINT `b_n_ab` FOREIGN KEY (`num`) REFERENCES `board` (`num`)
+)
+COMMENT='글 차단'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `tag` (
+	`reply_num` INT(11) UNSIGNED NOT NULL,
+	`tag_id` VARCHAR(50) NOT NULL,
+	`tag_nick` VARCHAR(10) NOT NULL DEFAULT 'N',
+	`num` INT(11) UNSIGNED NULL DEFAULT NULL,
+	INDEX `rep_num` (`reply_num`),
+	INDEX `num` (`num`),
+	CONSTRAINT `r_rn_t` FOREIGN KEY (`reply_num`) REFERENCES `reply` (`reply_num`)
+)
+COMMENT='태그'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `goodreply` (
+	`id` VARCHAR(50) NOT NULL,
+	`num` INT(11) UNSIGNED NOT NULL,
+	`reply_writer` VARCHAR(50) NOT NULL,
+	`reply_num` INT(11) UNSIGNED NOT NULL,
+	`reg_date` DATETIME NULL DEFAULT NULL,
+	INDEX `r_rn_gr_fk` (`reply_num`),
+	INDEX `id` (`id`),
+	INDEX `num` (`num`),
+	CONSTRAINT `r_rn_gr` FOREIGN KEY (`reply_num`) REFERENCES `reply` (`reply_num`),
+	CONSTRAINT `b_n_gr` FOREIGN KEY (`num`) REFERENCES `board` (`num`)
+)
+COMMENT='댓글 좋아요'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+CREATE TABLE `replyreport` (
+	`num` INT(11) UNSIGNED NOT NULL,
+	`id` VARCHAR(50) NOT NULL,
+	`reply_num` INT(11) UNSIGNED NOT NULL,
+	`report_date` DATE NOT NULL,
+	`category` VARCHAR(2) NOT NULL,
+	`reply_writer` VARCHAR(50) NOT NULL,
+	INDEX `num` (`num`),
+	INDEX `r_rn_rpr_fk` (`reply_num`),
+	CONSTRAINT `r_rn_rp` FOREIGN KEY (`reply_num`) REFERENCES `reply` (`reply_num`)
+)
+COMMENT='댓글 신고'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+-----------------------------------------------------------------
+
+CREATE VIEW good_view AS
+SELECT b.*, COUNT(g.id) AS good_num
+FROM board b
+JOIN goodwrite g
+ON b.num = g.num
+WHERE b.reg_date > DATE_ADD(NOW(), INTERVAL -3 MONTH) AND prior=0 AND locked=0 AND notice='N'
+GROUP BY b.num ORDER BY good_num DESC LIMIT 50;
+
+
+CREATE VIEW good_reply_view AS
+SELECT v.*, COUNT(r.reply_num) AS reply_count
+FROM good_view AS v LEFT OUTER JOIN reply AS r
+ON r.num = v.num
+GROUP BY v.num
+ORDER BY v.good_num DESC, reply_count DESC, v.reg_date DESC LIMIT 20;
+
+-----------------------------------------------------------------
+
+CREATE VIEW favor_view AS
+SELECT num, id FROM goodwrite
+UNION ALL
+SELECT num, reply_writer FROM reply;
+
+CREATE VIEW all_good_view AS
+SELECT b.*, IFNULL(COUNT(g.id), 0) AS good_count
+FROM board AS b
+LEFT OUTER JOIN goodwrite AS g
+ON b.num=g.num
+GROUP BY b.num ORDER BY b.reg_date DESC;
+
+CREATE VIEW all_view AS
+SELECT a.*, IFNULL(COUNT(r.reply_num), 0) AS reply_count
+FROM all_good_view AS a
+LEFT OUTER JOIN reply AS r
+ON a.num=r.num
+GROUP BY a.num ORDER BY a.reg_date DESC;
+
+CREATE VIEW reply_view AS
+SELECT r.*, IFNULL(COUNT(g.id), 0) AS good_count
+FROM reply AS r
+LEFT OUTER JOIN goodreply AS g
+ON r.reply_num=g.reply_num
+GROUP BY r.reply_num
+ORDER BY r.reply_num DESC;

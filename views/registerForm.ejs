@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+	<form action="/wRegister" method="post">
+		<table>
+			<tr>
+				<th>이메일</th>
+				<td>
+					<input type="email" name="userId" size="50" maxlength="50">
+				</td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td>
+					<input type="password" name="pw" size="30" maxlength="20">
+				</td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td>
+					<input type="radio" name="sex" value="1">남자
+				</td>
+				<td>
+					<input type="radio" name="sex" value="2">여자
+				</td>
+			</tr>
+			<tr>
+				<th>생년</th>
+				<td>
+					<input type="number" name="birth">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="가입">
+					<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

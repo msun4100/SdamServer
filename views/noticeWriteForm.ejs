@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>쓰담</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<style type="text/css">
+	.viewTable { border: 2px solid black; margin:auto; border-collapse:collapse; border-spacing: 10px; }
+	th { border: 1px solid black; padding: 5px;}
+	td { border: 1px solid black; }
+	.buttons { margin: auto; }
+	</style>
+	</head>
+	<body>
+	<nav id="menu">
+	<ul >
+		<li>
+		<a href="#" class="parentMenu">공지사항</a>
+			<ul>
+				<li><a href="/wNotice" class="childMenu">공지목록</a></li>
+				<li><a href="/wNWrite" class="childMenu">공지작성</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">글관리</a>
+			<ul>
+				<li><a href="/wArticle" class="childMenu">글쓰기</a></li>
+				<li><a href="/wList" class="childMenu">글목록</a></li>
+			</ul>
+		</li>
+		<li>
+		<a href="#" class="parentMenu">사용자관리</a>
+			<ul>
+				<li><a href="#" class="childMenu">회원 목록</a></li>
+				<li><a href="#" class="childMenu">차단된 회원</a></li>
+				<li><a href="#" class="childMenu">신고된 회원</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="parentMenu">차단 및 신고</a>
+			<ul>
+				<li><a href="#" class="childMenu">신고된 글</a></li>
+				<li><a href="#" class="childMenu">차단된 글</a></li>
+				<li><a href="#" class="childMenu">신고된 댓글</a></li>
+				<li><a href="#" class="childMenu">차단된 댓글</a></li>
+			</ul>
+		</li>
+	</ul>
+	</nav>
+	<section>
+		<form action="/wNWrite" method="post">
+		<table class="viewTable">
+			<tr>
+				<td colspan="2" style="text-align:center; font-size:15pt; padding:5px;">공지사항 작성</td>
+			</tr>
+			<tr>
+				<th>감정</th>
+				<td style="padding:5px;">
+					<select class="emotionSelector" name="emotion">
+						<option value="0" selected>기쁨</option>
+						<option value="1">슬픔</option>
+						<option value="2">놀람</option>
+						<option value="3">화남</option>
+						<option value="4">부끄</option>
+						<option value="5">미안</option>
+						<option value="6">피곤</option>
+						<option value="7">웃김</option>
+						<option value="8">긴장</option>
+						<option value="9">설렘</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>배경이미지</th>
+				<td style="padding:5px;">
+					<select class="imageSelector" name="image">
+						<option value="0" selected>000</option>
+						<option value="1">001</option>
+						<option value="2">002</option>
+						<option value="3">003</option>
+						<option value="4">004</option>
+						<option value="5">005</option>
+						<option value="6">006</option>
+						<option value="7">007</option>
+						<option value="8">008</option>
+						<option value="9">009</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td><textarea name="content" rows="20" cols="50"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center; padding:10px;">
+				<input type="submit" value="완료">
+				<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+		</form>
+	</section>
+	</body>
+</html>
